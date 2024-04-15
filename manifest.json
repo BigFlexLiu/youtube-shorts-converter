@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Shorts Converter",
+    "version": "1.0",
+    "description": "Redirects YouTube Shorts to normal video format.",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "tabs",
+        "youtube.com"
+    ],
+    "declarative_net_request": {
+      "rule_resources": [
+        {
+          "id": "ruleset",
+          "enabled": true,
+          "path": "redirect-rules.json"
+        }
+      ]
+    },
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
